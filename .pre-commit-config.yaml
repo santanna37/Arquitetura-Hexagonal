@@ -13,3 +13,11 @@ repos:
             "--rcfile=.pylintrc",  # Use a custom pylint configuration file
             "--load-plugins=pylint.extensions.docparams",  # Correct spelling for extensions
           ]
+  - repo: local
+    hooks:
+      - id: requirements
+        name: requirements
+        entry: bash -c 'venv/bin/pip3 freeze > requirements.txt; git add requirements.txt'
+        language: system
+        pass_filenames: false
+        stages: [commit]
