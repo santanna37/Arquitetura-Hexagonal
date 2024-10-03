@@ -1,7 +1,7 @@
 [MAIN]
 
 disable=
-      C0116, #missing-function-docstring
+      C0116, # missing-function-docstring
       E0015,
       C0114,
       W0703,
@@ -9,6 +9,11 @@ disable=
       C0321,
       W0221,
       R0801,
+      C0115, # missing-class-docstring
+      C0303, # trailing-whitespace
+      E1305, # too-many-format-args
+      W0612, # unused-variable
+      R0903, # too-few-public-methods
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
